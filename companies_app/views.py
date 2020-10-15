@@ -35,6 +35,7 @@ class ProductListView(generics.ListAPIView):
 
 class ProductDetailView(generics.RetrieveAPIView):
     """Вывод отдельного продукта"""
+
     queryset = Product.objects.all()
     serializer_class = ProductDetailSerializer
     permission_classes = [permissions.AllowAny]
